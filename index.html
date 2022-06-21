@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    table { empty-cells: hide; }
+</style>
+<h1>Hello</h1>
+
+<body>
+    <table id="mytable" border="1">
+    <script>    
+    let alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","",""];
+    html = '';
+        for (let index = 0; index < alpha.length; index+=4) {
+            if(index%4==0){html +="<tr>"}
+                html += `
+                        <td>${alpha[index]}</td>
+                        <td>${alpha[index+1]}</td>
+                        <td>${alpha[index+2]}</td>
+                        <td>${alpha[index+3]}</td>
+                        `
+            if(index%4==0){html +="</tr>"}
+        }
+        document.getElementById("mytable").innerHTML = html;
+
+    </script>
+    </table>
+</body>
+</html>
