@@ -8,11 +8,13 @@
 
 </head>
 <body>
+    <h1>My JS Table</h1>
+    <h3 id="demo">result</h3>
 <script>
 
 let alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-
-let result = "<table border=1>";
+let result = "";
+ result += "<table border=1>";
 
 result += "<tr>";
 
@@ -27,8 +29,8 @@ for (let i = 0; i < alpha.length; i++) {
 }
 result += "</table>";
 
-document.body.innerHTML = result;
+document.getElementById("demo").innerHTML = result;
     </script>
-    </table>
+   
 </body>
 </html>
